@@ -161,3 +161,24 @@ checkoutBtn.addEventListener("click", () => {
     checkoutMessage.textContent = "";
   }, 4000);
 });
+
+
+// Smooth scroll back to top
+const backToTopBtn = document.getElementById("backToTop");
+
+backToTopBtn.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});
+
+// Optional: Show button only after scrolling down
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 200) {
+    backToTopBtn.style.display = "inline-block";
+  } else {
+    backToTopBtn.style.display = "none";
+  }
+});
+
