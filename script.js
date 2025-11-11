@@ -182,3 +182,25 @@ window.addEventListener("scroll", () => {
   }
 });
 
+
+
+
+const themeToggleBtn = document.getElementById("themeToggle");
+
+// Check for saved theme in localStorage
+const savedTheme = localStorage.getItem("theme");
+if (savedTheme) {
+  document.documentElement.classList.toggle("dark", savedTheme === "dark");
+}
+
+// Toggle dark/light mode
+themeToggleBtn.addEventListener("click", () => {
+  document.documentElement.classList.toggle("dark");
+
+  if (document.documentElement.classList.contains("dark")) {
+    localStorage.setItem("theme", "dark");
+  } else {
+    localStorage.setItem("theme", "light");
+  }
+});
+
