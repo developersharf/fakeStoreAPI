@@ -187,20 +187,17 @@ window.addEventListener("scroll", () => {
 
 const themeToggleBtn = document.getElementById("themeToggle");
 
-// Check for saved theme in localStorage
+// Load saved theme
 const savedTheme = localStorage.getItem("theme");
-if (savedTheme) {
-  document.documentElement.classList.toggle("dark", savedTheme === "dark");
+if (savedTheme === "dark") {
+  document.documentElement.classList.add("dark");
 }
 
 // Toggle dark/light mode
 themeToggleBtn.addEventListener("click", () => {
   document.documentElement.classList.toggle("dark");
-
-  if (document.documentElement.classList.contains("dark")) {
-    localStorage.setItem("theme", "dark");
-  } else {
-    localStorage.setItem("theme", "light");
-  }
+  const isDark = document.documentElement.classList.contains("dark");
+  localStorage.setItem("theme", isDark ? "dark" : "light");
 });
+
 
