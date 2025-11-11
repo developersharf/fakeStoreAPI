@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SmartShop - Online Store</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SmartShop - Online Store</title>
+
+<!-- Tailwind CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
 <script>
   tailwind.config = {
     darkMode: 'class'
@@ -13,200 +14,124 @@
 </script>
 
 </head>
-<body class="bg-gray-100">
-   <!-- Include this script tag or install `@tailwindplus/elements` via npm: -->
-<!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script> -->
-<div class="bg-gray-900">
-  <header class="absolute inset-x-0 top-0 z-50">
-    <nav aria-label="Global" class="flex items-center justify-between p-6 lg:px-8">
-      <div class="flex lg:flex-1">
-        <a href="#" class="-m-1.5 p-1.5">
-          <span class="sr-only">Your Company</span>
-          <img src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500" alt="" class="h-8 w-auto" />
-        </a>
-      </div>
-      <div class="flex lg:hidden">
-        <button type="button" command="show-modal" commandfor="mobile-menu" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-200">
-          <span class="sr-only">Open main menu</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6">
-            <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
-        </button>
-      </div>
-      <div class="hidden lg:flex lg:gap-x-12">
-        <a href="#" class="text-sm/6 font-semibold text-white">Product</a>
-        <a href="#" class="text-sm/6 font-semibold text-white">Features</a>
-        <a href="#" class="text-sm/6 font-semibold text-white">Marketplace</a>
-        <a href="#" class="text-sm/6 font-semibold text-white">Company</a>
-      </div>
-      <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-        <a href="#" class="text-sm/6 font-semibold text-white">Log in <span aria-hidden="true">&rarr;</span></a>
-      </div>
-    </nav>
-    <el-dialog>
-      <dialog id="mobile-menu" class="backdrop:bg-transparent lg:hidden">
-        <div tabindex="0" class="fixed inset-0 focus:outline-none">
-          <el-dialog-panel class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-gray-900 p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-100/10">
-            <div class="flex items-center justify-between">
-              <a href="#" class="-m-1.5 p-1.5">
-                <span class="sr-only">Your Company</span>
-                <img src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500" alt="" class="h-8 w-auto" />
-              </a>
-              <button type="button" command="close" commandfor="mobile-menu" class="-m-2.5 rounded-md p-2.5 text-gray-200">
-                <span class="sr-only">Close menu</span>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6">
-                  <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-              </button>
-            </div>
-            <div class="mt-6 flow-root">
-              <div class="-my-6 divide-y divide-white/10">
-                <div class="space-y-2 py-6">
-                  <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5">Home</a>
-                  <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5">Products</a>
-                  <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5">Reviews</a>
-                  <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5">Contact</a>
-                </div>
-                <div class="py-6">
-                  <button id="themeToggle" class="bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700 transition">
-    Dark/Light</button>
-                </div>
-              </div>
-            </div>
-          </el-dialog-panel>
-        </div>
-      </dialog>
-    </el-dialog>
-  </header>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-200">
 
-  <div class="relative isolate px-6 pt-14 lg:px-8">
-    <div aria-hidden="true" class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80">
-      <div style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)" class="relative left-[calc(50%-11rem)] aspect-1155/678 w-144.5 -translate-x-1/2 rotate-30 bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-288.75"></div>
+<!-- Header -->
+<header class="bg-gray-900 dark:bg-gray-800">
+  <nav class="flex items-center justify-between p-6">
+    <a href="#" class="flex items-center">
+      <img src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500" alt="Logo" class="h-8 w-auto" />
+      <span class="sr-only">SmartShop</span>
+    </a>
+
+    <div class="flex items-center gap-4">
+      <a href="#" class="text-white dark:text-gray-200 font-semibold">Products</a>
+      <a href="#" class="text-white dark:text-gray-200 font-semibold">Features</a>
+      <a href="#" class="text-white dark:text-gray-200 font-semibold">Marketplace</a>
+      <a href="#" class="text-white dark:text-gray-200 font-semibold">Company</a>
+      <button id="themeToggle" class="ml-4 bg-gray-800 dark:bg-gray-600 text-white dark:text-gray-200 px-3 py-1 rounded hover:bg-gray-700 dark:hover:bg-gray-500 transition">
+        Dark/Light
+      </button>
     </div>
-    <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-      <div class="hidden sm:mb-8 sm:flex sm:justify-center">
-        <div class="relative rounded-full px-3 py-1 text-sm/6 text-gray-400 ring-1 ring-white/10 hover:ring-white/20">
-          Announcing our next round of funding. <a href="#" class="font-semibold text-indigo-400"><span aria-hidden="true" class="absolute inset-0"></span>Read more <span aria-hidden="true">&rarr;</span></a>
-        </div>
+  </nav>
+</header>
+
+<!-- Hero Section -->
+<section class="text-center px-6 py-32">
+  <h1 class="text-5xl sm:text-7xl font-bold">Data to enrich your online business</h1>
+  <p class="mt-6 text-lg sm:text-xl text-gray-400 dark:text-gray-300">Anim aute id magna aliqua ad ad non deserunt sunt.</p>
+  <div class="mt-10 flex justify-center gap-4">
+    <a href="#" class="bg-indigo-500 dark:bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-400 dark:hover:bg-indigo-500 transition">Get Started</a>
+    <a href="#" class="text-indigo-400 dark:text-indigo-300 font-semibold">Learn More →</a>
+  </div>
+</section>
+
+<!-- Products & Cart -->
+<div class="container mx-auto px-6 py-12 flex flex-col lg:flex-row gap-8">
+
+  <!-- Product Section -->
+  <div class="flex-1 bg-white dark:bg-gray-800 p-6 rounded-lg shadow">
+    <h2 class="text-2xl font-bold mb-6">Products</h2>
+    <div id="productContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6"></div>
+  </div>
+
+  <!-- Shopping Cart Section -->
+  <div class="w-full lg:w-1/3 bg-white dark:bg-gray-800 p-6 rounded-lg shadow">
+    <h2 class="text-2xl font-bold mb-4">Shopping Cart</h2>
+    <p class="text-gray-700 dark:text-gray-300">Current Balance: <span id="balance" class="font-semibold text-green-600">1000 BDT</span></p>
+    <button id="addMoney" class="mt-2 bg-blue-600 hover:bg-blue-500 text-white px-3 py-2 rounded transition">Add Money (+1000)</button>
+
+    <ul id="cartItems" class="divide-y divide-gray-200 dark:divide-gray-600 mt-4 mb-4"></ul>
+
+    <div class="flex justify-between mb-2">
+      <span>Subtotal</span>
+      <span id="subtotal">0 BDT</span>
+    </div>
+    <div class="flex justify-between mb-2">
+      <span>Delivery</span>
+      <span id="delivery">50 BDT</span>
+    </div>
+    <div class="flex justify-between mb-2">
+      <span>Shipping</span>
+      <span id="shipping">30 BDT</span>
+    </div>
+    <div class="flex justify-between mb-2">
+      <span>Discount</span>
+      <span id="discount">-0 BDT</span>
+    </div>
+    <div class="border-t border-gray-300 dark:border-gray-600 my-2"></div>
+    <div class="flex justify-between text-lg font-semibold">
+      <span>Total</span>
+      <span id="total">0 BDT</span>
+    </div>
+
+    <div class="mt-4 text-red-600" id="balanceWarning"></div>
+
+    <!-- Coupon -->
+    <div class="mt-6 flex flex-col gap-2">
+      <input type="text" id="couponInput" placeholder="Enter coupon code" class="border border-gray-300 dark:border-gray-600 rounded px-3 py-2 w-1/2 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-200">
+      <div class="flex gap-2 mt-2">
+        <button id="applyCoupon" class="bg-gray-800 dark:bg-gray-600 text-white dark:text-gray-200 px-4 py-2 rounded hover:bg-gray-700 dark:hover:bg-gray-500 transition">Apply</button>
+        <button id="checkoutBtn" class="bg-blue-600 hover:bg-blue-500 text-white px-5 py-2 rounded transition">Checkout</button>
       </div>
-      <div class="text-center">
-        <h1 class="text-5xl font-semibold tracking-tight text-balance text-white sm:text-7xl">Data to enrich your online business</h1>
-        <p class="mt-8 text-lg font-medium text-pretty text-gray-400 sm:text-xl/8">Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat.</p>
-        <div class="mt-10 flex items-center justify-center gap-x-6">
-          <a href="#" class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">Get started</a>
-          <a href="#" class="text-sm/6 font-semibold text-white">Learn more <span aria-hidden="true">→</span></a>
-        </div>
-      </div>
     </div>
-    <div aria-hidden="true" class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]">
-      <div style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)" class="relative left-[calc(50%+3rem)] aspect-1155/678 w-144.5 -translate-x-1/2 bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-288.75"></div>
-    </div>
+
+    <div class="mt-4 text-center text-green-600 font-medium" id="checkoutMessage"></div>
   </div>
 </div>
 
-<div class="container mx-auto px-6 py-12">
-    <div class="flex flex-col lg:flex-row gap-8">
-
-      <!-- Product Section -->
-      <div class="flex-1 bg-white p-6 rounded-lg shadow">
-        <h2 class="text-2xl font-bold tracking-tight text-gray-900 mb-6">Products</h2>
-        <div id="productContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6"></div>
-      </div>
-
-      <!-- Shopping Cart Section -->
-      <div class="w-full lg:w-1/3 bg-white p-6 rounded-lg shadow">
-        <h2 class="text-2xl font-bold mb-4 text-gray-800">Shopping Cart</h2>
-        
-        <div class="mb-4">
-          <p class="text-gray-700">Current Balance: <span id="balance" class="font-semibold text-green-600">1000 BDT</span></p>
-          <button id="addMoney" class="mt-2 bg-blue-600 text-white px-3 py-2 rounded hover:bg-blue-500 transition">Add Money (+1000)</button>
-        </div>
-
-        <ul id="cartItems" class="divide-y divide-gray-200 mb-4"></ul>
-
-        <div class="flex justify-between text-gray-700 mb-2">
-          <span>Subtotal</span>
-          <span id="subtotal">0 BDT</span>
-        </div>
-        <div class="flex justify-between text-gray-700 mb-2">
-          <span>Delivery</span>
-          <span id="delivery">50 BDT</span>
-        </div>
-        <div class="flex justify-between text-gray-700 mb-2">
-          <span>Shipping</span>
-          <span id="shipping">30 BDT</span>
-        </div>
-        <div class="flex justify-between text-gray-700 mb-2">
-          <span>Discount</span>
-          <span id="discount">-0 BDT</span>
-        </div>
-        <div class="border-t border-gray-300 my-2"></div>
-        <div class="flex justify-between text-lg font-semibold text-gray-900">
-          <span>Total</span>
-          <span id="total">0 BDT</span>
-        </div>
-
-        <div class="mt-4 text-sm text-red-600" id="balanceWarning"></div>
-
-        <!-- Coupon Section -->
-        <div class="mt-6">
-          <input type="text" id="couponInput" placeholder="Enter coupon code"
-            class="border border-gray-300 rounded px-3 py-2 w-1/2" />
-          <button id="applyCoupon"
-            class="bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700 transition">
-            Apply
-          </button>
-          <button id="checkoutBtn" class="bg-blue-600 text-white px-5 py-2 rounded hover:bg-blue-500 transition">
-    Checkout
-  </button>
-        </div>
-  
-<div class="mt-4 text-center text-green-600 font-medium" id="checkoutMessage"></div>
-
-      </div>
-    </div>
-  </div>
-
-    <footer class="bg-gray-800 text-gray-200 py-10" id="siteFooter">
+<!-- Footer -->
+<footer class="bg-gray-800 dark:bg-gray-900 text-gray-200 py-10">
   <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
-    
-    <!-- Contact Info -->
     <div>
       <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
       <p>123 Main Street, Your City, Country</p>
       <p>Email: info@example.com</p>
       <p>Phone: +1 (555) 123-4567</p>
     </div>
-
-    <!-- Quick Links -->
     <div>
       <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
       <ul class="space-y-2">
-        <li><a href="index.html" class="hover:text-white transition">Home</a></li>
-        <li><a href="shop.html" class="hover:text-white transition">Shop</a></li>
-        <li><a href="about.html" class="hover:text-white transition">About</a></li>
-        <li><a href="contact.html" class="hover:text-white transition">Contact</a></li>
+        <li><a href="#" class="hover:text-white transition">Home</a></li>
+        <li><a href="#" class="hover:text-white transition">Shop</a></li>
+        <li><a href="#" class="hover:text-white transition">About</a></li>
+        <li><a href="#" class="hover:text-white transition">Contact</a></li>
       </ul>
     </div>
-
-    <!-- Copyright -->
     <div class="flex flex-col justify-between">
       <div>
         <h3 class="text-lg font-semibold mb-4">About</h3>
-        <p class="text-sm">© 2025 YourCompany. All rights reserved.</p>
+        <p class="text-sm">© 2025 SmartShop. All rights reserved.</p>
       </div>
-      <button 
-        id="backToTop" 
-        class="mt-6 bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded self-start transition"
-      >
+      <button id="backToTop" class="mt-6 bg-gray-700 dark:bg-gray-600 hover:bg-gray-600 dark:hover:bg-gray-500 text-white px-4 py-2 rounded self-start transition">
         Back to Top
       </button>
     </div>
-
   </div>
-        
 </footer>
 
-    <script src="script.js"></script>
+<!-- JS -->
+
+<script src="script.js"></script>
 </body>
 </html>
