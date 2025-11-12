@@ -91,7 +91,7 @@ addMoneyBtn.addEventListener("click", () => {
   updateCart();
 });
 
-// Fetch products safely
+
 fetch("https://fakestoreapi.com/products")
   .then(res => {
     if (!res.ok) throw new Error("Network response error");
@@ -163,7 +163,7 @@ checkoutBtn.addEventListener("click", () => {
 });
 
 
-// Smooth scroll back to top
+
 const backToTopBtn = document.getElementById("backToTop");
 
 backToTopBtn.addEventListener("click", () => {
@@ -173,7 +173,7 @@ backToTopBtn.addEventListener("click", () => {
   });
 });
 
-// Optional: Show button only after scrolling down
+
 window.addEventListener("scroll", () => {
   if (window.scrollY > 200) {
     backToTopBtn.style.display = "inline-block";
@@ -187,13 +187,13 @@ window.addEventListener("scroll", () => {
 
 const themeToggleBtn = document.getElementById("themeToggle");
 
-// Load saved theme
+
 const savedTheme = localStorage.getItem("theme");
 if (savedTheme === "dark") {
   document.documentElement.classList.add("dark");
 }
 
-// Toggle dark/light mode
+
 themeToggleBtn.addEventListener("click", () => {
   document.documentElement.classList.toggle("dark");
   const isDark = document.documentElement.classList.contains("dark");
